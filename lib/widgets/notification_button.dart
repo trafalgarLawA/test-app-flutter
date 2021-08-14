@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:for_test/screens/requests_screen.dart';
 
 class NotificationButton extends StatelessWidget {
   const NotificationButton({Key? key}) : super(key: key);
@@ -11,12 +12,17 @@ class NotificationButton extends StatelessWidget {
         constraints: BoxConstraints.tightFor(width: 71),
         child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-                primary: Color(0XFF1312FA),
+                // primary: ,
                 shape: new RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(286)
                 )
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => RequestScreen()),
+              );
+            },
             child: Row(
               children: [
                 Icon(
