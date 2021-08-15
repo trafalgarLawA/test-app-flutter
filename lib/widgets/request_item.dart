@@ -1,32 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:for_test/constants/theme.dart';
+import 'package:for_test/widgets/custom_text.dart';
+import 'package:for_test/widgets/user_name.dart';
 
-class NotificationItem extends StatelessWidget {
+import 'action_request.dart';
+
+class RequestItem extends StatelessWidget {
 
   final String image;
-  final List<TextSpan> content;
   final Color? color;
   final Widget action;
+  final String name;
+  final String userId;
 
-  const NotificationItem({required this.image,required this.content,this.color,required this.action});
+  const RequestItem({required this.image,this.color,required this.action,required this.name,required this.userId});
 
 
   @override
   Widget build(BuildContext context) {
     return FractionallySizedBox(
-      widthFactor: .93,
+      widthFactor: .95,
       child: Column(
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Expanded(
-                flex: 10,
                 child: Container(
                   height: 72,
                   padding: EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(242)),
+                    borderRadius: BorderRadius.all(Radius.circular(242)),
                     color: Colors.white,
                     boxShadow:  [
                       BoxShadow(
@@ -47,30 +51,19 @@ class NotificationItem extends StatelessWidget {
                       ),
                       SizedBox(width: 10,),
                       Expanded(
-                        child: Container(
-                          child: RichText(
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 3,
-                            text: TextSpan(
-                              style: DefaultTextStyle.of(context).style,
-                              children: content,
-                            ),
-                          ),
+                        child: UserName(
+                          name: name,
+                          userId: userId,
                         ),
                       ),
-                      SizedBox(width: 20,),
-                      action
+                      SizedBox(width: 10,),
+                      Container(
+                        child: action,
+                      )
                     ],
                   ),
                 ),
               ),
-              SizedBox(width: 10,),
-              Expanded(
-                child: CircleAvatar(
-                  radius: 8,
-                  backgroundColor: color??Colors.transparent,
-                ),
-              )
             ],
           ),
           SizedBox(height: 20,)

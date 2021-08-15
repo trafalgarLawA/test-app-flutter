@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> {
 
   EdgeInsets padding = const EdgeInsets.all(12);
 
-  int _selectedItemPosition = 2;
+  int _selectedItemPosition = 3;
 
 
 

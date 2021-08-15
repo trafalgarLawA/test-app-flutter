@@ -7,7 +7,7 @@ class NotificationButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
       child: ConstrainedBox(
         constraints: BoxConstraints.tightFor(width: 71),
         child: ElevatedButton(
@@ -31,7 +31,7 @@ class NotificationButton extends StatelessWidget {
                 ),
                 SizedBox(width: 8,),
                 Text(
-                  '11',
+                  '22',
                   style: TextStyle(fontSize: 13),
                 ),
               ],

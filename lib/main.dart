@@ -28,8 +28,8 @@ class ExampleApp extends StatelessWidget {
           screens: [
             HomeScreen(),
             SearchScreen(),
-            NotificationsScreen(),
             AddScreen(),
+            NotificationsScreen(),
             ProfileScreen()
           ],
         ),

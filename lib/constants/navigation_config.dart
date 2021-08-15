@@ -8,6 +8,7 @@ bool showSelectedLabels = false;
 
 bool showUnselectedLabels = false;
 
+//items to the bottom floating navigation bar ()=> to add a new ine make sure to add a screen also to MyApp widget :)
 const List<BottomNavigationBarItem> listOfBottomItems = [
   const BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
   const BottomNavigationBarItem(
@@ -19,6 +20,6 @@ const List<BottomNavigationBarItem> listOfBottomItems = [
   const BottomNavigationBarItem(
       icon: CircleAvatar(
         radius: 12,
-        backgroundImage: AssetImage('images/pic.png'),
+        backgroundImage: AssetImage('images/user.png'),
       ), label: 'profile')
 ];
